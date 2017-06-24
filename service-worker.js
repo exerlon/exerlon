@@ -7,7 +7,5 @@ self.addEventListener('activate', function(event) {
 })
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    new Response("This page is taken by service worker!!"))
-  )
+  event.respondWith(fetch(event.request))
 });
