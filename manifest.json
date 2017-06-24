@@ -1,0 +1,14 @@
+{
+  "short_name": "EZMinus Match Music",
+  "name": "EZMinus Match your Music",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "browser",
+  "background_color": "white",
+}
