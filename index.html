@@ -22,6 +22,7 @@
                 </span>
         </header><br>
 		
+
 <SCRIPT Language="JavaScript">
   function GetDay(intDay){
     var DayArray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", 
@@ -75,10 +76,26 @@ function KillClock() {
    }
 }
 </script>
-<body onload="StartClock()" onunload="KillClock()">
+<body onload="StartClock()" onunload="KillClock()" >
 <form name="theClock">
    <input type=text name="theTime" size=8 style="text-align: center">
 </form>
+
+<center><p id="demo"></p></center>
+<center><button onclick="myFunction()">คุณคือใคร???</button></center><br>
+<script>
+function myFunction() {
+    var txt;
+    var person = prompt("คุณคือใคร:",);
+    if (person == null || person == "") {
+        txt = "ใส่ชื้อหน่อยสิ";
+    } else {
+        txt = "สวัสดี " + person;
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
 <center>
 <form method="get" action="http://www.google.com/search">
 
@@ -94,6 +111,8 @@ onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black
 </div>
 
 </form></center>
+
+
 	
 <br><footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
