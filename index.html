@@ -1,125 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="gray">
-<link rel="manifest" href="manifest.json">
-<link rel="shortcut icon" href="icon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-<link rel="stylesheet" href="styles.css" />
-
-	<title> EZMinus Match Music???</title>
-</head>
-<body>
- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-            <div class="mdl-layout__header-row portfolio-logo-row">
-                <span class="mdl-layout__title">
-                    <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">EZMinus Match your Music??</span>
-                </span>
-        </header><br>
-		
-
-<SCRIPT Language="JavaScript">
-  function GetDay(intDay){
-    var DayArray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", 
-                         "Thursday", "Friday", "Saturday")
-    return DayArray[intDay]
-    }
-
-  function GetMonth(intMonth){
-    var MonthArray = new Array("January", "February", "March",
-                               "April", "May", "June",
-                               "July", "August", "September",
-                               "October", "November", "December") 
-    return MonthArray[intMonth] 	  	 
-    }
-  function getDateStrWithDOW(){
-    var today = new Date()
-    var year = today.getYear()
-    if(year<1000) year+=1900
-    var todayStr = GetDay(today.getDay()) + ", "
-    todayStr += GetMonth(today.getMonth()) + " " + today.getDate()
-    todayStr += ", " + year
-    return todayStr
-    }
-</SCRIPT>
-
-<SCRIPT Language="JavaScript">
-    document.write(getDateStrWithDOW())
-</SCRIPT>
-<script language="JavaScript">
-var clockID = 0;
-function UpdateClock() {
-   if(clockID) {
-      clearTimeout(clockID);
-      clockID  = 0;
-   }
-   var tDate = new Date();
-
-   document.theClock.theTime.value = "" 
-                                   + tDate.getHours() + ":" 
-                                   + tDate.getMinutes() + ":" 
-                                   + tDate.getSeconds();
-   clockID = setTimeout("UpdateClock()", 1000);
-}
-function StartClock() {
-   clockID = setTimeout("UpdateClock()", 500);
-}
-function KillClock() {
-   if(clockID) {
-      clearTimeout(clockID);
-      clockID  = 0;
-   }
-}
-</script>
-<body onload="StartClock()" onunload="KillClock()" >
-<form name="theClock">
-   <input type=text name="theTime" size=8 style="text-align: center">
-</form>
-
-<center><p id="demo"></p></center>
-<center><button onclick="myFunction()">คุณคือใคร???</button></center><br>
-<script>
-function myFunction() {
-    var txt;
-    var person = prompt("คุณคือใคร:",);
-    if (person == null || person == "") {
-        txt = "ใส่ชื้อหน่อยสิ";
-    } else {
-        txt = "สวัสดี " + person;
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
-<center>
-<form method="get" action="http://www.google.com/search">
-
-<div style="border:2px dotted black;padding:4px;width:15em;">
-<table border="0" align="center" cellpadding="0">
-<tr><td>
-<input type="text"   name="q" size="25" style="color:#808080;"
-maxlength="255" value="มันจะเห็นไหมนะ"
-onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
-<input type="submit" value="Go!" />
-<input type="hidden" name="sitesearch"/></td></tr>
-</table>
-</div>
-
-</form></center>
-
-
-	
-<br><footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">EZMinus Match your Music??</div>
-                </div>
-            </footer>
-
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>EZMinus Match Music???</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#db5945">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="manifest" href="manifest.json">
+		<link rel="shortcut icon" href="icon.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+			<div id="page-wrapper">
+					<div id="wrapper">
+							<section class="panel banner right">
+								<div class="content color0 span-3-75">
+									<center><p id="demo"></p></center>
+										<center><button onclick="myFunction()">คุณคือใคร???</button></center><br>
+										<script>
+										function myFunction() {
+											var txt;
+											var person = prompt("คุณคือใคร:",);
+											if (person == null || person == "") {
+												txt = "ใส่ชื้อหน่อยสิ";
+											} else {
+												txt = "สวัสดี " + person;
+											}
+											document.getElementById("demo").innerHTML = txt;
+										}
+										</script><br>
+									<ul class="actions">
+									<form method="get" action="http://www.google.com/search">
+										<input type="text"   name="q" size="25" style="color:#808080;" maxlength="255" value="มันจะเห็นไหมนะ"
+											onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" 
+											onblur="if(this.value=='')this.value=this.defaultValue; "/>
+										<input type="submit" value="Go!" />
+									</form>
+									</ul>
+								</div>
+								<div class="image filtered span-1-75" data-position="25% 25%">
+									<img src="images/pic01.jpg" alt="" />
+								</div>
+							</section>
+					</div>	
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -134,6 +61,5 @@ onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black
   firebase.initializeApp(config);
 </script>
 <script type="text/javascript" src="index.js"></script>
-</body>
-
+	</body>
 </html>
